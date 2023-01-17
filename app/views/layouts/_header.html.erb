@@ -26,8 +26,12 @@
       </svg>
       <nav id="navigation-container">
         <ul>
-          <li>Articles</li>
-          <li>Analytics</li>
+          <li>
+            <%= link_to 'Articles', root_path, class: 'nav-link' %>
+          </li>
+          <li>
+            <%= link_to 'Analytics', analytics_path, class: 'nav-link' %>
+          </li>
         </ul>
       </nav>
   </div>

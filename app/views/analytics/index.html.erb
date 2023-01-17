@@ -1,0 +1,12 @@
+<% @analytics.each do |query| %>
+    <table>
+    <tr>
+      <th>Query</th>
+      <th>Ocurrencies</th>
+    </tr>
+    <tr>
+      <td><%= query[0] %></td>
+      <td><%= query[1] %></td>
+    </tr>
+  </table>
+<% end %>

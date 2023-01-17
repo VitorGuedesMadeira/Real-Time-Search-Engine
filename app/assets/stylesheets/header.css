@@ -33,6 +33,11 @@
   cursor: pointer;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: grey;
+}
+
 #navigation-container ul li:hover {
   border-bottom: 3px solid #0560FC;
   color: #0560FC;
