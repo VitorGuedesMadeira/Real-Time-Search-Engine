@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
+<input type="text" placeholder="Search Article" id="search-bar">
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
+    <%= link_to article, id: "article-container", class: "articles-container" do %>
+      <%= render article %>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New article", new_article_path %>
+<%= link_to "New article", new_article_path, id: "new-article" %>

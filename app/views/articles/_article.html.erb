@@ -1,17 +1,16 @@
-<div id="<%= dom_id article %>">
+<div>
   <p>
-    <strong>Title:</strong>
-    <%= article.title %>
+    <strong><%= article.title %></strong>
   </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= article.description %>
+  <hr id="row">
+
+  <p id="article-description">
+    <em><%= article.description %></em>
   </p>
 
-  <p>
-    <strong>Author:</strong>
-    <%= article.author %>
+  <p id="article-author">
+    <strong><%= article.author %></strong>
   </p>
 
 </div>
