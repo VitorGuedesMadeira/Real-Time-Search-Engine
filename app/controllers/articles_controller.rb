@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   def index
     if params[:query].present?
       @articles = Article.where("title LIKE ?", "#{params[:query]}%")
+      create_query(params[:query])
     else
       @articles = Article.all
     end
@@ -68,6 +69,21 @@ class ArticlesController < ApplicationController
   end
 
   private
+    def create_query(query)
+      return unless query.length >= 3
+      if Query.last
+        last_query = Query.last
+      else
+        last_query = Query.create!(body: query)
+      end
+
+      similarity = String::Similarity.cosine last_query.body, query
+      if similarity > 0.8
+        last_query.update(body: query)
+      else
+        Query.create!(body: query)
+      end
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
