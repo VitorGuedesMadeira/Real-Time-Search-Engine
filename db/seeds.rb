@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+20.times do |article|
+    Article.create(title: Faker::Book.title, description: Faker::Lorem.paragraphs, author: Faker::Book.author)
+end
