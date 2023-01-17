@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
       end
 
       similarity = String::Similarity.cosine last_query.body, query
-      if similarity > 0.8
+      if similarity > 0.9
         last_query.update(body: query)
       else
         Query.create!(body: query)

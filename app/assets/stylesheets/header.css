@@ -43,20 +43,21 @@
   gap: 0.75rem;
 }
 
-#desktop-sign-in-sign-up p:nth-child(1) {
+#sign-in {
   background-color: #EEEEEE;
   color: black;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: 0.5s;
   min-width: fit-content;
+  text-decoration: none;
 }
 
-#desktop-sign-in-sign-up p:nth-child(1):hover {
+#sign-in:hover {
   background-color: #E1E1E1;
 }
 
-#desktop-sign-in-sign-up p:nth-child(2),
+#sign-up,
 #sign-out {
   background-color: #0560FC;
   color: white;
@@ -66,7 +67,7 @@
   text-decoration: none;
 }
 
-#desktop-sign-in-sign-up p:nth-child(2):hover,
+#sign-up,
 #sign-out:hover {
   background-color: #0356E5;
 }

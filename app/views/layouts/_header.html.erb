@@ -26,20 +26,23 @@
       </svg>
       <nav id="navigation-container">
         <ul>
-          <li>Home</li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Examples</li>
+          <li>Articles</li>
+          <li>Analytics</li>
         </ul>
       </nav>
   </div>
   
   <div id="desktop-sign-in-sign-up">
-    <p>Sign in</p>
     <% if current_user %>
+      <p id="sign-in">Welcome, <strong><%= current_user.name.split(' ')[0] %></strong></p>
       <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, id: "sign-out" %>
     <% else %>
-      <p>Create Account</p>
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Log in", new_session_path(resource_name), id: "sign-in" %><br />
+      <% end %>
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "Create Account", new_registration_path(resource_name), id: "sign-up" %><br />
+      <% end %>
     <% end %>
   </div>
 </header>
