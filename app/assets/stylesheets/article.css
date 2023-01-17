@@ -41,6 +41,10 @@
   color: lightgray;
 }
 
+#article-title {
+  text-decoration: none;
+}
+
 #article-description {
   color: darkslategrey;
 }

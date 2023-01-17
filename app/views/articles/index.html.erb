@@ -1,13 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<input type="text" placeholder="Search Article" id="search-bar">
+<%= form_with(url: articles_path, method: :get, data: {turbo_frame: "articles", turbo_action: "advance"}) do |form| %>
+  <%= form.text_field :query, id: "search-bar", placeholder: "Search by article name" %>
+  <%= form.submit "Search" %>
+<% end %>
 
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= link_to article, id: "article-container", class: "articles-container" do %>
-      <%= render article %>
-    <% end %>
-  <% end %>
-</div>
+<%= render "articles", articles: @articles %>
 
 <%= link_to "New article", new_article_path, id: "new-article" %>
