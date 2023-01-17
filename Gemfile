@@ -27,6 +27,9 @@ gem "string-similarity"
 # Devise authentication
 gem 'devise'
 
+# Use this gem for pagination
+gem 'kaminari'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

@@ -1,8 +1,31 @@
+#search-container {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+}
+
 #search-bar {
   width: 100%;
   padding: 0.5rem;
   outline: none;
   border-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#search-button {
+  background-color: var(--color-2);
+  border-radius: 25px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 4rem;
+  cursor: pointer;
+}
+
+#search-button img {
+  height: 100%;
+  padding: 0.5rem;
+  filter: invert(1);
 }
 
 #articles {
