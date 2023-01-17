@@ -13,6 +13,16 @@ table {
 table th {
   background-color: var(--color-2);
   color: var(--color-1);
+  text-align: center;
+}
+
+table th:nth-child(1) {
+  max-width: 275px;
+  min-width: 275px;
+}
+
+table th:nth-child(2) {
+  background-color: rgb(17, 17, 49);
 }
 
 table td,
@@ -25,6 +35,16 @@ table td {
   border-right: 1px solid #f8f8f8;
   font-size: 12px;
 }
+
+table td:nth-child(1) {
+    max-width: 275px;
+    min-width: 275px;
+    overflow-x: scroll;
+  }
+  
+  table td:nth-child(2) {
+    text-align: center;
+  }
 
 table thead th {
   color: #fff;
