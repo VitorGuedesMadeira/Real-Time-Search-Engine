@@ -24,6 +24,9 @@ gem "faker"
 # Use this gem to check similarity between strings
 gem "string-similarity"
 
+# Devise authentication
+gem 'devise'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

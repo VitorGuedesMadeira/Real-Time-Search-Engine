@@ -56,15 +56,18 @@
   background-color: #E1E1E1;
 }
 
-#desktop-sign-in-sign-up p:nth-child(2) {
+#desktop-sign-in-sign-up p:nth-child(2),
+#sign-out {
   background-color: #0560FC;
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
   min-width: fit-content;
+  text-decoration: none;
 }
 
-#desktop-sign-in-sign-up p:nth-child(2):hover {
+#desktop-sign-in-sign-up p:nth-child(2):hover,
+#sign-out:hover {
   background-color: #0356E5;
 }
 

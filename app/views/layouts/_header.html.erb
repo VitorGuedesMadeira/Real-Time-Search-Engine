@@ -36,6 +36,10 @@
   
   <div id="desktop-sign-in-sign-up">
     <p>Sign in</p>
-    <p>Create Account</p>
+    <% if current_user %>
+      <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, id: "sign-out" %>
+    <% else %>
+      <p>Create Account</p>
+    <% end %>
   </div>
 </header>
