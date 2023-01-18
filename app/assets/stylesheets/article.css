@@ -20,6 +20,11 @@
   border-bottom-left-radius: 0;
   width: 4rem;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+#search-button:hover {
+  background-color: #384C60;
 }
 
 #search-button img {
