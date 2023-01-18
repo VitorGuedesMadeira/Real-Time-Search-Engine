@@ -1,0 +1,88 @@
+#header-container {
+  background-color: white;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.15);
+  padding: 0 1rem;
+}
+
+#logo-and-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#navigation-container ul {
+  display: none;
+  align-items: center;
+  list-style: none;
+  height: 4rem;
+}
+
+#navigation-container ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.75rem;
+  transition: 0.5s;
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: grey;
+}
+
+#navigation-container ul li:hover {
+  border-bottom: 3px solid #0560FC;
+  color: #0560FC;
+}
+
+#desktop-sign-in-sign-up {
+  display: none;
+  gap: 0.75rem;
+}
+
+#sign-in {
+  background-color: #EEEEEE;
+  color: black;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  min-width: fit-content;
+  text-decoration: none;
+}
+
+#sign-in:hover {
+  background-color: #E1E1E1;
+}
+
+#sign-up,
+#sign-out {
+  background-color: #0560FC;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  min-width: fit-content;
+  text-decoration: none;
+}
+
+#sign-up,
+#sign-out:hover {
+  background-color: #0356E5;
+}
+
+@media (min-width: 768px) {
+  #desktop-sign-in-sign-up {
+    display: flex;
+  }
+
+  #navigation-container ul {
+    display: flex;
+  }
+}

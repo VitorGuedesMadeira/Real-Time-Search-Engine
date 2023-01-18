@@ -1,0 +1,24 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
+  <div class="sign-in-container">
+    <h2>Sign up</h2>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name', class: "registration-input", class: "form-inputs" %>
+    </div>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail", class: "form-inputs" %>
+    </div>
+    <div class="field">
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-inputs" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation", class: "form-inputs" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Sign up", class: "form-button" %>
+    </div>
+  </div>
+<% end %>

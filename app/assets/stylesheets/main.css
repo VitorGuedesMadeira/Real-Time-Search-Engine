@@ -1,0 +1,10 @@
+#main-container {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

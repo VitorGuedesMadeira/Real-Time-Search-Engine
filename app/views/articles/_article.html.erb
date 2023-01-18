@@ -1,0 +1,15 @@
+<div id="article-container">
+  <p>
+    <strong><%= link_to article.title, article_path(article), id: "article-title" %></strong>
+  </p>
+
+  <hr id="row">
+
+  <p id="article-description">
+    <em><%= article.description %></em>
+  </p>
+
+  <p id="article-author">
+    <strong><%= article.author %></strong>
+  </p>
+</div>
