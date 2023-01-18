@@ -11,7 +11,7 @@ The purpose of this project is to record different user's inputs in realtime and
 
 # Live Demo Version
 
-Loading...
+[live version](https://helpjuice-vitorguedes.herokuapp.com/)
 
 ## Getting Started
 
