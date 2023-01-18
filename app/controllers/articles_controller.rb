@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
   def index
     if params[:query].present?
       @articles = Article.where("title LIKE ?", "%#{params[:query]}%").page(params[:page])
+      @articles |= Article.where("description LIKE ?", "%#{params[:query]}%").page(params[:page])
+      @articles |= Article.where("author LIKE ?", "%#{params[:query]}%").page(params[:page])
       create_query(params[:query])
     else
       @articles = Article.all.page(params[:page])

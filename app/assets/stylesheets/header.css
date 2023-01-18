@@ -8,6 +8,7 @@
   color: grey;
   box-shadow: 0 0 15px rgb(0, 0, 0, 0.15);
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 #logo-and-nav {
@@ -17,7 +18,10 @@
 }
 
 #navigation-container ul {
-  display: none;
+  display: flex;
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
   align-items: center;
   list-style: none;
   height: 4rem;
@@ -31,6 +35,27 @@
   transition: 0.5s;
   border-bottom: 3px solid white;
   cursor: pointer;
+  text-decoration: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#navigation-container ul li:nth-child(1) {
+  background-color: white;
+  position: absolute;
+  bottom: 1rem;
+  min-width: 100px;
+  box-shadow: 0px 0px 10px black;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#navigation-container ul li:nth-child(2) {
+  background-color: white;
+  position: absolute;
+  bottom: 5.5rem;
+  min-width: 100px;
+  box-shadow: 0px 0px 10px black;
 }
 
 .nav-link {
@@ -44,11 +69,12 @@
 }
 
 #desktop-sign-in-sign-up {
-  display: none;
+  display: flex;
   gap: 0.75rem;
 }
 
 #sign-in {
+  display: none;
   background-color: #EEEEEE;
   color: black;
   padding: 0.5rem 1rem;
@@ -78,11 +104,28 @@
 }
 
 @media (min-width: 768px) {
+  #navigation-container ul li:nth-child(1) {
+    position: unset;
+    box-shadow: unset;
+    border-radius: unset;
+  }
+  
+  #navigation-container ul li:nth-child(2) {
+    position: unset;
+    box-shadow: unset;
+    border-radius: unset;
+  }
+
+  #sign-in {
+    display: flex;
+  }
+
   #desktop-sign-in-sign-up {
     display: flex;
   }
 
   #navigation-container ul {
     display: flex;
+    position: unset;
   }
 }
