@@ -12,7 +12,27 @@ RSpec.feature 'Articles', type: :feature do
       expect(page).to have_content('Articles')
     end
 
-    it 'there is a search button that the user can click' do
+    it 'when the user logs in, they are presented with the articles page' do
+      expect(page).to have_content('Analytics')
+    end
+
+    it 'Header contains the word Welcome' do
+      expect(page).to have_content('Welcome')
+    end
+
+    it 'Header contains the word Log out' do
+      expect(page).to have_content('Log out')
+    end
+
+    it 'Footer contains the name Vitor G. M.' do
+      expect(page).to have_content('Vitor G. M. ')
+    end
+
+    it 'when the user logs in, they are presented with the articles page' do
+      expect(page).to have_content('Articles')
+    end
+
+    it 'The current path is going to be the root (articles path)' do
       expect(current_path).to eq(articles_path)
     end
   end

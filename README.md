@@ -3,9 +3,11 @@
 
 The purpose of this project is to record different user's inputs in realtime and ultimately display analytics & trends on what people are searching for the most. It is built mainly with Ruby on Rails.
 
+![](./app/assets/images/helpjuice-favicon.png)
+
 # Quick view
 
-![](./app/assets/images/helpjuice-favicon.png)
+![](./app/assets/images/helpjuice.png)
 
 # Live Demo Version
 

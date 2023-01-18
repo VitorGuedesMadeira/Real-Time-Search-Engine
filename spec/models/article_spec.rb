@@ -34,7 +34,15 @@ RSpec.describe Article, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'Article\s title should return Testing description' do
+  it 'Article\s title should return Testing title' do
     expect(subject.title).to eq('Testing title')
+  end
+
+  it 'Article\s description should return Testing description' do
+    expect(subject.description).to eq('Testing description Testing description Testing description Testing description Testing description Testing description Testing description Testing description Testing description Testing description')
+  end
+
+  it 'Article\s author should return Testing author' do
+    expect(subject.author).to eq('Testing author')
   end
 end
